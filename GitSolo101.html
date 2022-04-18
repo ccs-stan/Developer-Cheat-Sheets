@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>GitHub Solo 101</title>
+        <style>
+            body {background-color: #c0c0c0; font-size: x-large; background-color: cadetblue;}
+            #container {width:1200px; margin-left: auto; margin-right: auto; border-style: solid; border-color: black; background-color: #c0c0c0; padding: 1.5em;}
+            h1 {text-align: center; font-size: 2em;}
+            p {margin-left: 2em; margin-right: 2em;}
+            #indent1 {padding-left: 3em;}
+            #indent2 {padding-left: 5em;}
+            #shrink {font-size: .8em;}
+            #bold {font-weight: bold;}
+        </style>
+    </head>
+    <body>
+        <h1>Github Solo 101</h1>
+        <div id="container">
+          <p>
+            When working alone and using GitHub for version control, then following commands will get you through most of what you will be doing.<br>
+            <span id="shrink">(it is assumed that you have created an account on github.com, created a github repository and installed git 
+                (git bash on Windows) before starting here)</span>
+            <ol type="1">
+                <li>Create a directory on your local PC and cd into that directory.</li>
+                <li>Type "<span id="bold">git init</span>" to create the files Git will use to track your changes.</li>
+                <li>Create the file(s) that you will include in this repository (files and subdirectories will be part of the repository).</li>
+                <li>Type "<span id="bold">git add -A</span>" to let Git know that you want all files and directories included in the repository.</li>
+                <li>Type "<span id="bold">git commit -m "<em>&lt;Version comments go here&gt;</em>"</span>" to tell Git you are creating a new version with a description (version comments).</li>
+                <li>Login to GitHub and create a new repository.</li>
+                <ol type="i">
+                    <li><span id="bold">Click on your name</span> near the top left corner.</li>
+                    <li><span id="bold">Click on "Repositories"</span> near the top of your screen.</li>
+                    <li><span id="bold">Click the "New" button</span> (green) near the upper right corner.</li>
+                    <li><span id="bold">Enter the repository name and description, select Public or Private</span> and leave the boxes below unchecked to create an empty 
+                        repository.</li>
+                    <li><span id="bold">click "Create repository"</span>.</li>
+                </ol>
+                <li>Now back to your computer.</li>
+                <li>Type "<span id="bold">git remote add <em>origin</em> https://github.com/&lt;your GitHub account name&gt;/&lt;your repository name&gt;</span>" to tell git the repository name 
+                    to update with your files.<br>Note: origin is a variable name (nickname) that can be anything you like. Just make sure you use it later with "push" or "pull" commands.
+                    <br>Substitute your GitHub account name between the slashes after "github.com" and your GitHub repository name after the last slash.<br>
+                <li>Type "<span id="bold">git branch -M main</span>" to tell git to update the main branch.</li>
+                <li>type "<span id="bold">git push -u <em>origin</em> main</span>" to update the GitHub repository with your (committed) files.<br>Be sure to use the same name for "origin" that you 
+                    used in the "git remote add" command.</li>
+                <li>Now your GitHub repository should contain a copy of the commited files from your computer.</li>
+            </ol>
+          </p>
+          <br>
+            Notes:
+            <ul>
+                <li>To test ssh access to GitHub from Git Bash, type "ssh -T git@github.com" - 
+                    responds "Hi &lt;your github id&gt"! You've successfully authenticated, but GitHub does not provide shell access."<br>
+                    Then type "git fetch" (no output) or "git push -u &lt;origin&gt; &lt;branch&gt;" to confirm that everything is up to date.</li>
+                <li>To change the origin repository use this command: "git remote set-url origin &lt;url&gt;" (where origin is customary nickname"). 
+                    You can also use a different nickname with the new URL.</li>
+        </div>
+    </body>
+</html>

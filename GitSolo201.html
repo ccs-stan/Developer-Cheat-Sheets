@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>GitHub 201</title>
+        <style>
+            body {background-color: #c0c0c0; font-size: x-large; background-color: cadetblue;}
+            #container {width:1200px; margin-left: auto; margin-right: auto; border-style: solid; border-color: black; background-color: #c0c0c0; padding: 1.5em;}
+            h1 {text-align: center; font-size: 2em;}
+            p {margin-left: 2em; margin-right: 2em;}
+            #indent1 {padding-left: 3em;}
+            #indent2 {padding-left: 5em;}
+            #shrink {font-size: .8em;}
+            #bold {font-weight: bold;}
+            .sub {border: 2em; border-style: solid; border-width:thin;}
+            h2 {text-align: center;}
+        </style>
+    </head>
+    <body>
+        <h1>Github 201</h1>
+        <div id="container">
+            <div id="intro" class='sub'>
+                <p>
+                    Creating and working within a branch. Branches allow you to make code changes to your project while leaving the main branch (production) alone. 
+                    Here's how you might want to use a Branch:
+                    <ul>
+                        <li>Two bugs have been identified in the code (both bug fixes may take some time so we don't want to make changes in our main (production) branch</li>
+                        <li>You've been assigned to fix one of the bugs</li>
+                        <li>You will need to create a copy (branch) of the code that you can change</li>
+                        <li>You will want to make changes and test your code using the new branch</li>
+                        <li>When your changes have been tested and are ready for production use, you'll want to merge your changes into the main (production) branch code</li>
+                    </ul>
+                </p>
+            </div>
+            <div id="local" class='sub'>
+                <h2>Working on your Local PC (Git/GitBash)</h2>
+                <ol type="1">
+                    <li>Create a directory on your local PC and cd into that directory.</li>
+                    <ul>
+                        <li>mkdir bugfix</li>
+                        <li>cd bugfix</li>
+                    </ul>
+                    <li>Type "<span id="bold">git clone <repository with production code - ie. https://github.com/{myproject}/repo.git</span>" to create a copy of the production repository for you to changes</li>
+                    <li>Type "<span id="bold">cd repo</span> to create put your terminal in the directory with your working copy of the cloned code</li>
+                    <li>Type "<span id="bold">git branch bugfix1</span> to create a branch for you to use to change and test your code updates</li>
+                    <li>Type "<span id="bold">git checkout bugfix</span> to align your changes to the branch you created to make your code changes</li>
+                    <li>Make your program changes and test your code until you have approval to merge your changes into the production version of the code (use VS Code)</li>
+                    <li>Type "<span id="bold">git add -A</span> the new files you created that will fix the bug</li>
+                    <li>Type "<span id="bold">git commit -m "bug fix 1 updates - give details here"</span> log a record of what was changed</li>
+                    <li>Type "<span id="bold">git push --set-upstream origin bugfix</span>" to copy your branch to the Github repository</li>
+                    <li>Type "<span id="bold">git merge</span>" merges your changes into the local copy of main branch (the merge must also be done on Github - browser)</li>
+                    <li>Are there more steps to merge your changes to the main branch and delete the bugfix1 branch????</li>
+                </ol>
+            </div>
+            <div id="cloud" class='sub'>
+                <h2>In the cloud (Github)</h2>
+                <ol type="1">
+                    <li><span id="bold">Click on "{number} branches"</span> next to where you select your branch</li>
+                    <li><span id="bold">Click on "New pull request"</span> on the line labeled "bugfix" in the "Active branches" area</li>
+                    <li><span id="bold">Click the "Create pull request"</span> button below the comments area - use default comments from your local push</li>
+                    <li><span id="bold">CLick the "Merge pull request",then "Confirm merge"</span> buttons to update the main branch from the bugfix branch</li>
+                    <li><span id="bold">click "Create repository"</span>.</li>
+                    <li>You can optionally click "Delete branch" to remove the bugfix branch</li>
+                </ol>
+            </div>
+        </div>
+    </body>
+</html>

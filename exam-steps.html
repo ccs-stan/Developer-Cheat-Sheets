@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Bootcamp Exam - Github</title>
+        <style>
+            body {
+                background-color: darkslateblue;
+                color: ghostwhite;
+                margin-left: 5%;
+                margin-right: 5%;
+                font-size: larger;
+            }
+            h1 {
+                text-align: center;
+                text-decoration: underline;
+            }
+            #emph {
+                text-emphasis: ;
+            }
+            #sub-header {
+                text-align: center;
+                font-size: xx-large;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="container">
+        <h1>Github for the Exam</h1>
+        <p>
+            <h2 id="sub-header">Using the github.com Web Interface - create a new repository</h2>
+            <h2>Setting up a new repository</h2>
+            <ul>
+                <li>From your github.com home page click "Repositories" (near the top center).</li>
+                <li>Click the green "New" button near the upper right corner.</li>
+                <li>Enter the name and description of the new repository. (ie. bootCampExam</li>
+                <li>Make the new repository Public or Private</li>
+                <li>Click the green "Create Repository" button at the bottom.</li>
+            </ul>
+        </p>
+        <p>
+            <h2 id="sub-header">Using <em>terminal</em> or <em>git bash</em> - Update the Exam Code</h2>
+            <h2>Cloning a Repository - use a new terminal/gitbash window</em></h2>
+            <ul>
+                <li>On your PC change to a high level directory where your git projects with be stored (ie. "cd" - with no parameter, puts you in your home directory.</li>
+                <li>Type "git init" to setup the files Git will need to manage files on your PC.</li>
+                <li>Type "git clone git@github.com:HackerUSA-CE/placement-exam-starter-code.git" to clone the exam repository.</li>
+                <li>Type "cd placement-exam-starter-code</li>
+                <li>Type "git status" to confirm git knows about your files.</li>
+                <li>Type "code ." to start VS Code editor and open the directory you just cloned.</li>
+                <li>Modify the code per exam instructions.</li>
+                <li>Type "git status" to see that git has acknowledged your changes and git prompts you to the next step(s).</li>
+                <li>Type "git add" to make git aware of your changes.</li>
+                <li>Type "git commit -m "Your comments describing all your changes so the approver will know what changes to look for."</li>
+                <li>Type "git remote set-url origin https://github.com/&lt;your github name&gt;/bootCampExam.git" to point to <i>bootCampExam</i>, under <i>your github name</i>.
+                     The origin was set to "origin" with the "git clone" command and</li>
+                <li>Type "git push origin main" to send your changes to your github web repository. Since we did not create a branch, you will send your changes to the "main" 
+                    branch. Your code changes should now be viewable on github (the web tool.) Be sure to check for errors that would prevent your repository from being updated.</li>
+                <li>In Canvas go to <i>Grades</i> and select "Skills Assessment Submission" (near the bottom), click <i>Submit Assignment</i>, enter your github repository URL in the 
+                    <i>Website URL:</i> field and click on <i>Submit Assignment</i>.</li>
+                <li>Using Slack notify the instructors in the <i>fs-01-a-students</i> channel that you've submitted your exam.</li>
+            </ul>
+        </p>
+    </div>
+    </body>
+</html>
